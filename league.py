@@ -12,17 +12,17 @@ import pandas as pd
 
 # App title
 st.markdown('''
-# League of Legends Champion Bios!
+# League Champ Explorer!
 
 **Credits**
-- App built by Leo Delima
-- Built in `Python` using `streamlit`,`pandas`, and Riot's DDragon API
+- App built by [Leo Delima](https://ninefourlion.com/)
+- Built in `Python` using `streamlit`,`pandas`, and `Riot's DDragon API`
 ''')
 
 # Sidebar
-st.sidebar.subheader('Query parameters')
+st.sidebar.subheader('Query Parameters')
 champlist = pd.read_csv('https://raw.githubusercontent.com/ninefourlion/league/main/LoL-Champions.csv')
-champselect = st.sidebar.selectbox('Select a Champion you are interested in', champlist)
+champselect = st.sidebar.selectbox('Select a champion', champlist)
 
 url = "http://ddragon.leagueoflegends.com/cdn/11.6.1/data/en_US/champion/"+champselect+".json"
 
@@ -42,6 +42,6 @@ imgurl = "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/"+champsele
 
 st.image(imgurl)
 
-st.write(name, title)
+st.title(name + " " + title)
 st.write(lore)
 
