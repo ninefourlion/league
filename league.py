@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Wed Mar 31 09:10:43 2021
 
@@ -32,8 +31,6 @@ response.json()
 
 champRawData = json.loads(response.text)
 crd = champRawData['data']
-
-
 
 name = crd[champselect]['id']
 lore = crd[champselect]['lore']
